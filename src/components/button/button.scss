@@ -1,0 +1,24 @@
+$height: 36px;
+$margin: 6px;
+$radius: 2px;
+
+.rm-button {
+    border-radius: $radius;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: $height;
+    margin: $margin;
+
+    &.rm-button-raised {
+
+    }
+
+    &.rm-button-flat {
+
+    }
+
+    &.rm-button-floating {
+
+    }
+}
