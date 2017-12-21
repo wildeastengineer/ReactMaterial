@@ -1,0 +1,67 @@
+$navigation-width: 200px;
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.rm-layout {
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    .rm-navigation {
+        box-shadow: 2px 0 5px rgba(128, 128, 128, 0.5);
+        height: 100%;
+        width: $navigation-width;
+        flex-grow: 0;
+        flex-shrink: 0;
+
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                a {
+                    box-sizing: border-box;
+                    border-bottom: solid 1px #ccc;
+                    color: #333;
+                    display: inline-block;
+                    text-decoration: none;
+                    padding: 15px;
+                    width: 100%;
+                }
+
+                &:hover {
+                    background-color: #eee;
+                }
+            }
+        }
+    }
+
+    .rm-body {}
+}
+
+// Background Net
+
+$net-color-1: #f0f0f0;
+$net-color-2: rgba(255, 255, 255, 0);
+$net-size: 2px;
+
+.with-net {
+    background: repeating-linear-gradient(
+                    to left,
+                    $net-color-2 0px,
+                    $net-color-2 $net-size - 1,
+                    $net-color-1 $net-size - 1,
+                    $net-color-1 $net-size
+    ),
+    repeating-linear-gradient(
+                    $net-color-2 0px,
+                    $net-color-2 $net-size - 1,
+                    $net-color-1 $net-size - 1,
+                    $net-color-1 $net-size
+    ), #fff;
+}
